@@ -3,8 +3,8 @@
         {
             "title": "Brightondle",
             "description": "A Wordle clone with Brighton & Hove related words.",
-            "image": "https://obfuscatedgenerated.ml/brightondle/logo.png",
-            "link": "https://obfuscatedgenerated.ml/brightondle/"
+            "image": "https://www.ollieg.codes/brightondle/logo.png",
+            "link": "https://www.ollieg.codes/brightondle/"
         },
         {
             "title": "ClickbaitDetector",
@@ -27,8 +27,14 @@
         {
             "title": "xTask",
             "description": "An online UI for internet multitasking on any device.",
-            "image": "https://xtask.obfuscatedgenerated.ml/public/icon.png",
+            "image": "https:///xtask.ollieg.codes/public/icon.png",
             "link": "https://xtask.ollieg.codes/"
+        },
+        {
+            "title": "Animopoly",
+            "description": "A fun animal purchasing board game with absolutely no relation to other board games whatsoever!",
+            "image": "/public/logo.png",
+            "link":"https://github.com/obfuscatedgenerated/animopoly"
         },
         {
             "title": "TinyTools",
@@ -43,6 +49,12 @@
             "link": "https://github.com/obfuscatedgenerated/ytWordCloud"
         },
         {
+            "title": "Numpretty",
+            "description": "Numpretty converts numbers into their human-readable form, efficiently.",
+            "image": "/public/logo.png",
+            "link":"https://github.com/obfuscatedgenerated/numpretty"
+        },
+        {
             "title": "DrawGUI",
             "description": "A Python program that draws shapes for the user automatically.",
             "image": "https://github.com/obfuscatedgenerated/DrawGUI/raw/main/assets/icon.png",
@@ -50,7 +62,7 @@
         },
         {
             "title": "SkillSpeed",
-            "description": "A Java program that calculates the speed of a skill in a game.",
+            "description": "An online program that calculates the speed of a skill in a game.",
             "image": "https://cdn.glitch.com/42bff732-d662-487d-ba1f-19a036823276%2FB2A9C74B-7591-4289-9D52-209D771FB074.png",
             "link": "https://www.ollieg.codes/SkillSpeed/"
         }
