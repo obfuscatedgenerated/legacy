@@ -17,7 +17,7 @@
             "description": "[WIP] A Java program that generates passwords to the user's parameters.",
             "image": "/public/logo.png",
             "link": "https://github.com/obfuscatedgenerated/PasswordGenerator"
-        }
+        },
         {
             "title": "gmodCSSDownloader",
             "description": "A small Python program that uses SteamCMD to install CS:Source assets for Garry's Mod easily, quickly and legally.",
