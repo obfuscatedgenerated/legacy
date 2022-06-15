@@ -1,10 +1,10 @@
 {
     "projects": [
         {
-            "title": "xTask",
-            "description": "An online UI for internet multitasking on any device.",
-            "image": "https://xtask.obfuscatedgenerated.ml/public/icon.png",
-            "link": "https://xtask.obfuscatedgenerated.ml/"
+            "title": "Brightondle",
+            "description": "A Wordle clone with Brighton & Hove related words.",
+            "image": "https://obfuscatedgenerated.ml/brightondle/logo.png",
+            "link": "https://obfuscatedgenerated.ml/brightondle/"
         },
         {
             "title": "ClickbaitDetector",
@@ -17,24 +17,18 @@
             "description": "[WIP] A Java program that generates passwords to the user's parameters.",
             "image": "/public/logo.png",
             "link": "https://github.com/obfuscatedgenerated/PasswordGenerator"
-        },
-        {
-            "title": "Brightondle",
-            "description": "A Wordle clone with Brighton & Hove related words.",
-            "image": "https://obfuscatedgenerated.ml/brightondle/logo.png",
-            "link": "https://obfuscatedgenerated.ml/brightondle/"
-        },
-        {
-            "title": "Windows 8.2",
-            "description": "[WIP] A parody operating system.",
-            "image": "https://win82.obfuscatedgenerated.ml/public/icon.png",
-            "link": "https://win82.obfuscatedgenerated.ml/"
-        },
+        }
         {
             "title": "gmodCSSDownloader",
             "description": "A small Python program that uses SteamCMD to install CS:Source assets for Garry's Mod easily, quickly and legally.",
             "image": "https://github.com/obfuscatedgenerated/gmodCSSDownloader/raw/main/portfolio-img.png",
             "link": "https://github.com/obfuscatedgenerated/gmodCSSDownloader"
+        },
+        {
+            "title": "xTask",
+            "description": "An online UI for internet multitasking on any device.",
+            "image": "https://xtask.obfuscatedgenerated.ml/public/icon.png",
+            "link": "https://xtask.ollieg.codes/"
         },
         {
             "title": "TinyTools",
@@ -58,13 +52,7 @@
             "title": "SkillSpeed",
             "description": "A Java program that calculates the speed of a skill in a game.",
             "image": "https://cdn.glitch.com/42bff732-d662-487d-ba1f-19a036823276%2FB2A9C74B-7591-4289-9D52-209D771FB074.png",
-            "link": "https://www.obfuscatedgenerated.ml/SkillSpeed/"
-        },
-        {
-            "title": "ZappCore",
-            "description": "A group of Discord bots written in Node.JS.",
-            "image": "https://cdn.discordapp.com/avatars/757676413238378610/1d6c39ea2aa25f840106febb981bcbb2.png?size=4096",
-            "link": "https://bots.obfuscatedgenerated.ml/"
+            "link": "https://www.ollieg.codes/SkillSpeed/"
         }
     ]
 }
