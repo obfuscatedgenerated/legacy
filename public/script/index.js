@@ -70,7 +70,8 @@ fetch("/public/projects.json").then(res => res.json()).then(data => {
     }
 }).catch(err => {
     console.log(err);
-    alert("Failed fetching projects!");
+    // as much as I demonise innerHTML over innerText and inline styles over a sheet, it's not worth the hassle for something without user interaction
+    document.querySelector("#project-shelf").innerHTML = "<h2>Error loading projects. Please try again later, or <a style=\"color: #fff;\" href=\"/public/projects.json\">view the raw JSON data</a>.</h2>";
 });
 
 window.onresize = () => {
