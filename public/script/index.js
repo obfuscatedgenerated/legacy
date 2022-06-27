@@ -10,10 +10,10 @@ document.querySelectorAll(".scroll-anim").forEach(el => {
     ro.observe(el);
 });
 
-function add_card(title, description, image, link) {
+function add_card(title, description, image, id) {
     // this needs cleaning up!
     var hyper = document.createElement("a");
-    hyper.href = link;
+    hyper.href = `./project/${id}`;
     hyper.target = "_blank";
     hyper.classList.add("project");
     hyper.classList.add("scroll-anim");
@@ -61,7 +61,7 @@ fetch("/public/projects.json").then(res => res.json()).then(data => {
     for (let i in data.projects) {
         // spooky scary CLS sends shivers down your spine
         // this could be improved with a placeholder
-        add_card(data.projects[i].title, data.projects[i].description, data.projects[i].image, data.projects[i].link);
+        add_card(data.projects[i].title, data.projects[i].description, data.projects[i].image, data.projects[i].id);
     }
     if (window.matchMedia("screen and (max-width: 768px)").matches) {
         document.querySelectorAll(".project-blocker").forEach(el => {

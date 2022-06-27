@@ -15,12 +15,17 @@ app.get("*", function (req, res, next) {
 })
 
 app.use("/public", express.static(__dirname + "/public"))
-app.use("/project", express.static(__dirname + "/project"))
 
 app.get("/", function (req, res) {
   var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
   res.sendFile(__dirname + "/index.html")
   console.log("Served index to " + ip)
+})
+
+app.get("/project/:project", function (req, res) {
+  var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  res.sendFile(__dirname + "/project/" + req.params.project + ".html") // outrageously stupid for security but this is just a dev server, real site is on gh pages where this is done automatically
+  console.log("Served project " + req.params.project + " to " + ip)
 })
 
 app.use(function (req, res, next) {
