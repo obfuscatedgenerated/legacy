@@ -1,0 +1,5 @@
+.nojekyll
+.gitignore
+CNAME
+/project/template.html
+create_project_from_template.py

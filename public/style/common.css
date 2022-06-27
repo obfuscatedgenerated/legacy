@@ -1,0 +1,80 @@
+html, body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: OpenSans, "Open Sans", Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2.5vw;
+}
+
+h2 {
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 10vw;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 5vw;
+        text-align: center;
+    }
+}
+
+#links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #bbb;
+    font-size: 2.5vw;
+    transition: all 0.25s ease-in-out;
+}
+
+.social-text {
+    margin-left: 0.5vw;
+}
+
+@media screen and (max-width: 768px) {
+    #linkbox {
+        align-items: center;
+    }
+
+    #links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-link {
+        font-size: 7.5vw;
+    }
+
+    .social-text {
+        margin-left: 2.5vw;
+    }
+}
+
+.social-link:hover {
+    color: #fff;
+    text-shadow: rgba(255,255,255,0.9) 0px 0px 39px;
+}

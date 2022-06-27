@@ -1,6 +1,7 @@
 {
     "projects": [
         {
+            "id": "brightondle",
             "title": "Brightondle",
             "description": "A Wordle clone with Brighton & Hove related words.",
             "image": "https://www.ollieg.codes/brightondle/logo.png",
