@@ -3,3 +3,6 @@
 CNAME
 /project/template.html
 create_project_from_template.py
+server.js
+package.json
+package-lock.json
