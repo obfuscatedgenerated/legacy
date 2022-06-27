@@ -33,6 +33,15 @@ fs.watchFile("./public/projects.json", (curr, prev) => {
             console.log("Recompiled " + project);
         }
     }
+    for (let i in old_project_ids.filter(j => !project_ids.includes(j))) {
+        let project = old_project_ids[i];
+        console.log("Project deleted, archiving: " + project);
+        if (!fs.existsSync(`./project/_archive/`)) {
+            fs.mkdirSync(`./project/_archive/`);
+        }
+        fs.renameSync(`./project/${project}.html`, `./project/_archive/${project}.html`);
+        console.log("Archived " + project);
+    }
 });
 
 fs.watchFile("./project-src/template.handlebars", (curr, prev) => {

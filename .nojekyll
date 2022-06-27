@@ -2,6 +2,8 @@
 .gitignore
 CNAME
 /project-src/
+/project/_archive/
 compile.js
+watch.js
 package.json
 package-lock.json
