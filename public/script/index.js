@@ -81,6 +81,6 @@ window.onresize = () => {
     }
 };
 
-if (window.location.hash == "#robert") {
-    setTimeout(() => {document.querySelector("#robert").scrollIntoView();}, 1500); // makes it reappear in case it's the first view (because content is added and moved for the first time)
-}
+//if (window.location.hash == "#robert") {
+//    setTimeout(() => {document.querySelector("#robert").scrollIntoView();}, 1500); // makes it reappear in case it's the first view (because content is added and moved for the first time)
+//}
