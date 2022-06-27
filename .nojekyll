@@ -2,3 +2,6 @@
 .gitignore
 CNAME
 /project-src/
+compile.js
+package.json
+package-lock.json
