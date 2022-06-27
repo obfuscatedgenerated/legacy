@@ -8,60 +8,70 @@
             "link": "https://www.ollieg.codes/brightondle/"
         },
         {
+            "id": "clickbaitdetector",
             "title": "ClickbaitDetector",
             "description": "An AI written in Python with Tensorflow that detects clickbait.",
             "image": "https://github.com/obfuscatedgenerated/ClickbaitDetector/raw/main/logo-bg.png",
             "link": "https://github.com/obfuscatedgenerated/ClickbaitDetector"
         },
         {
+            "id": "passwordgenerator",
             "title": "PasswordGenerator",
             "description": "[WIP] A Java program that generates passwords to the user's parameters.",
             "image": "/public/logo.png",
             "link": "https://github.com/obfuscatedgenerated/PasswordGenerator"
         },
         {
+            "id": "gmodcssdownloader",
             "title": "gmodCSSDownloader",
             "description": "A small Python program that uses SteamCMD to install CS:Source assets for Garry's Mod easily, quickly and legally.",
             "image": "https://github.com/obfuscatedgenerated/gmodCSSDownloader/raw/main/portfolio-img.png",
             "link": "https://github.com/obfuscatedgenerated/gmodCSSDownloader"
         },
         {
+            "id": "xtask",
             "title": "xTask",
             "description": "An online UI for internet multitasking on any device.",
             "image": "https:///xtask.ollieg.codes/public/icon.png",
             "link": "https://xtask.ollieg.codes/"
         },
         {
+            "id": "animopoly",
             "title": "Animopoly",
             "description": "A fun animal purchasing board game with absolutely no relation to other board games whatsoever!",
             "image": "/public/logo.png",
             "link":"https://github.com/obfuscatedgenerated/animopoly"
         },
         {
+            "id": "tinytools",
             "title": "TinyTools",
             "description": "A collection of small tools for use in the terminal written in Python.",
             "image": "/public/logo.png",
             "link": "https://github.com/obfuscatedgenerated/TinyTools"
         },
         {
+            "id": "ytwordcloud",
             "title": "ytWordCloud",
             "description": "A Python program that generates a word cloud from a YouTube channel.",
             "image": "https://github.com/obfuscatedgenerated/ytWordCloud/raw/main/example.png",
             "link": "https://github.com/obfuscatedgenerated/ytWordCloud"
         },
         {
+            "id": "numpretty",
             "title": "Numpretty",
             "description": "Numpretty converts numbers into their human-readable form, efficiently.",
             "image": "/public/logo.png",
             "link":"https://github.com/obfuscatedgenerated/numpretty"
         },
         {
+            "id": "drawgui",
             "title": "DrawGUI",
             "description": "A Python program that draws shapes for the user automatically.",
             "image": "https://github.com/obfuscatedgenerated/DrawGUI/raw/main/assets/icon.png",
             "link": "https://github.com/obfuscatedgenerated/DrawGUI"
         },
         {
+            "id": "skillspeed",
             "title": "SkillSpeed",
             "description": "An online program that calculates the speed of a skill in a game.",
             "image": "https://cdn.glitch.com/42bff732-d662-487d-ba1f-19a036823276%2FB2A9C74B-7591-4289-9D52-209D771FB074.png",
