@@ -1,7 +1,6 @@
 exclude:
   - _config.yml
   - .gitignore
-  - .nojekyll
   - CNAME
   - package.json
   - package-lock.json
