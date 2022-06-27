@@ -10,10 +10,22 @@ document.querySelectorAll(".scroll-anim").forEach(el => {
     ro.observe(el);
 });
 
+window.addEventListener("unload", function(){}); // destroy bfcache, makes classes for fading act weird without it
+
+function link_transition(e, el) {
+    e.preventDefault();
+    console.log(el)
+    document.body.classList.add("fade-out");
+    setTimeout(() => {
+        window.location.assign(el.href);
+    }, 250);
+}
+
 function add_card(title, description, image, id) {
     // this needs cleaning up!
     var hyper = document.createElement("a");
     hyper.href = `./project/${id}`;
+    hyper.onclick = (e) => {link_transition(e, hyper)};
     hyper.classList.add("project");
     hyper.classList.add("scroll-anim");
     hyper.classList.add("fade-on-scroll");
