@@ -14,7 +14,6 @@ function add_card(title, description, image, id) {
     // this needs cleaning up!
     var hyper = document.createElement("a");
     hyper.href = `./project/${id}`;
-    hyper.target = "_blank";
     hyper.classList.add("project");
     hyper.classList.add("scroll-anim");
     hyper.classList.add("fade-on-scroll");
