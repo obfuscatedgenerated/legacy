@@ -1,0 +1,12 @@
+exclude:
+  - _config.yml
+  - .gitignore
+  - .nojekyll
+  - CNAME
+  - package.json
+  - package-lock.json
+  - compile.js
+  - watch.js
+  - server.js
+  - /project-src/
+  - /project/_archive/
