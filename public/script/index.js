@@ -10,11 +10,19 @@ document.querySelectorAll(".scroll-anim").forEach(el => {
     ro.observe(el);
 });
 
-window.addEventListener("unload", function(){}); // destroy bfcache, makes classes for fading act weird without it
+window.addEventListener("pageshow", (e) => {
+    if (e.persisted) {
+        console.log("page was persisted");
+        document.body.classList.remove("fade-out");
+        document.body.classList.add("fade-in");
+        setTimeout(() => {
+            document.body.classList.remove("fade-in");
+        }, 250);
+    }
+})
 
 function link_transition(e, el) {
     e.preventDefault();
-    console.log(el)
     document.body.classList.add("fade-out");
     setTimeout(() => {
         window.location.assign(el.href);
