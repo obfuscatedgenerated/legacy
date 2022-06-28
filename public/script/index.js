@@ -1,3 +1,5 @@
+const params = new URLSearchParams(window.location.search);
+
 const ro = new IntersectionObserver(el => {
     for (const e of el) {
         if (e.intersectionRatio > 0) {
@@ -10,16 +12,24 @@ document.querySelectorAll(".scroll-anim").forEach(el => {
     ro.observe(el);
 });
 
+function clean_fade_in() {
+    document.body.classList.remove("fade-out");
+    document.body.classList.add("fade-in");
+    setTimeout(() => {
+        document.body.classList.remove("fade-in");
+    }, 250);
+}
+
 window.addEventListener("pageshow", (e) => {
     if (e.persisted) {
         console.log("page was persisted");
-        document.body.classList.remove("fade-out");
-        document.body.classList.add("fade-in");
-        setTimeout(() => {
-            document.body.classList.remove("fade-in");
-        }, 250);
+        clean_fade_in();
     }
-})
+});
+
+if (params.has("fade-in")) {
+    clean_fade_in();
+}
 
 function link_transition(e, el) {
     e.preventDefault();
@@ -33,11 +43,11 @@ function add_card(title, description, image, id) {
     // this needs cleaning up!
     var hyper = document.createElement("a");
     hyper.href = `./project/${id}`;
-    hyper.onclick = (e) => {link_transition(e, hyper)};
+    hyper.onclick = (e) => { link_transition(e, hyper) };
     hyper.classList.add("project");
     hyper.classList.add("scroll-anim");
     hyper.classList.add("fade-on-scroll");
-    hyper.id = "project-" + title.replace(/\s/g, "").replace(/\./g, "");
+    hyper.id = "project-" + id.replace(/\s/g, "").replace(/\./g, "");
     hyper.style.backgroundImage = "url(\"" + image + "\")";
     var blocker = document.createElement("div");
     blocker.classList.add("project-blocker");
@@ -67,6 +77,10 @@ function add_card(title, description, image, id) {
     });
     document.querySelector("#project-shelf").appendChild(hyper);
     ro.observe(hyper);
+    if (window.location.hash === "#" + hyper.id) {
+        hyper.classList.add("visible");
+        hyper.scrollIntoView();
+    }
 }
 
 //alert("This page is under construction. Expect changes!")
