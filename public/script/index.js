@@ -94,6 +94,7 @@ fetch("/public/projects.json").then(res => res.json()).then(data => {
     for (let i in data.projects) {
         // spooky scary CLS sends shivers down your spine
         // this could be improved with a placeholder
+        // or we could prebake with handlebars, also prevents having to override the hash scroll via js as the element is available at first paint
         add_card(data.projects[i].title, data.projects[i].description, data.projects[i].image, data.projects[i].id);
     }
     if (window.matchMedia("screen and (max-width: 768px)").matches) {
