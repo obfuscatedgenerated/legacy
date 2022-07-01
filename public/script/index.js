@@ -28,6 +28,7 @@ document.querySelectorAll(".project").forEach(root => {
             el.style.setProperty("--container-width", el.getBoundingClientRect().width);
         });
     });
+    root.onclick = (e) => { link_transition(e, root) };
 });
 
 function clean_fade_in() {

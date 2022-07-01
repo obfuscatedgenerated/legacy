@@ -7,7 +7,6 @@ function add_card(document, title, description, image, id) {
     // this needs cleaning up!
     var hyper = document.createElement("a");
     hyper.href = `./project/${id}`;
-    hyper.onclick = (e) => { link_transition(e, hyper) };
     hyper.classList.add("project");
     hyper.classList.add("scroll-anim");
     hyper.classList.add("fade-on-scroll");
