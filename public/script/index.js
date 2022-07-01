@@ -12,6 +12,24 @@ document.querySelectorAll(".scroll-anim").forEach(el => {
     ro.observe(el);
 });
 
+document.querySelectorAll(".project").forEach(root => {
+    root.onmouseenter = () => {
+        document.querySelectorAll("#" + root.id + " > .project-blocker").forEach(el => {
+            el.style.setProperty("--container-width", el.getBoundingClientRect().width);
+        });
+    }
+    root.onmouseexit = () => {
+        document.querySelectorAll("#" + root.id + " > .project-blocker").forEach(el => {
+            el.style.setProperty("--container-width", el.getBoundingClientRect().width);
+        });
+    }
+    root.addEventListener("touchstart", () => {
+        document.querySelectorAll("#" + root.id + " > .project-blocker").forEach(el => {
+            el.style.setProperty("--container-width", el.getBoundingClientRect().width);
+        });
+    });
+});
+
 function clean_fade_in() {
     document.body.classList.remove("fade-out");
     document.body.classList.add("fade-in");
