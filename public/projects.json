@@ -64,6 +64,13 @@
             "link":"https://github.com/obfuscatedgenerated/numpretty"
         },
         {
+            "id": "typethon",
+            "title": "Typethon",
+            "description": "Typethon is an extremely lightweight and simple module for strongly typed Python.",
+            "image": "/public/logo.png",
+            "link":"https://github.com/obfuscatedgenerated/Typethon"
+        },
+        {
             "id": "drawgui",
             "title": "DrawGUI",
             "description": "A Python program that draws shapes for the user automatically.",
