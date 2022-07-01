@@ -1,6 +1,7 @@
 const hb = require("handlebars");
 const fs = require("fs");
 const ld = require("linkedom");
+const prettify = require("js-beautify").html;
 
 function add_card(document, title, description, image, id) {
     // this needs cleaning up!
@@ -28,7 +29,6 @@ function add_card(document, title, description, image, id) {
     document.querySelector("#project-shelf").appendChild(hyper);
 }
 
-
 function rebuild_all() {
     let projects = JSON.parse(fs.readFileSync("./projects.json", "utf8")).projects;
     let project_ids = projects.map(p => { return p.id; });
@@ -51,7 +51,7 @@ function rebuild_all() {
         console.log("Constructed project element for " + project);
     }
     console.log("Compiling index");
-    let project_html = document.querySelector("#project-shelf").innerHTML;
+    let project_html = prettify(document.querySelector("#project-shelf").innerHTML, {indent_size: 4, indent_char: " ", indent_level: 4});
     let compiled = hb.compile(index_template);
     let html = compiled({project_html: project_html});
     fs.writeFileSync(`./index.html`, html);
