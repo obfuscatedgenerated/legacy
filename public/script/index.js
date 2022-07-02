@@ -29,6 +29,9 @@ document.querySelectorAll(".project").forEach(root => {
         });
     });
     root.onclick = (e) => { link_transition(e, root) };
+    document.querySelectorAll("#" + root.id + " > .project-blocker").forEach(el => {
+        el.style.setProperty("--container-width", el.getBoundingClientRect().width);
+    });
 });
 
 function clean_fade_in() {
