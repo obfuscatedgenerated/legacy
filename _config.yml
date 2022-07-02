@@ -7,5 +7,5 @@ exclude:
   - compile.js
   - watch.js
   - server.js
-  - /project-src/
+  - /src/
   - /project/_archive/
