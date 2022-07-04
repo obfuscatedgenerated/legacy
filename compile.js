@@ -35,7 +35,7 @@ function rebuild_all() {
 
     let index_template = fs.readFileSync("./src/index.handlebars", "utf8");
 
-    const {document} = ld.parseHTML("<!DOCTYPE html><html lang=\"en\"><body><div id=\"project-shelf\"></div></body></html>");
+    const { document } = ld.parseHTML("<!DOCTYPE html><html lang=\"en\"><body><div id=\"project-shelf\"></div></body></html>");
 
     for (let i in project_ids) {
         let project = project_ids[i];
@@ -49,10 +49,21 @@ function rebuild_all() {
         add_card(document, data.title, data.description, data.image, project);
         console.log("Constructed project element for " + project);
     }
+    let live_list = fs.readdirSync("./project").filter(p => { return p.endsWith(".html") }).map(p => { return p.replace(/\.html$/, ""); });
+    let old_project_ids = live_list.filter(p => { return !project_ids.includes(p); });
+    for (let i in old_project_ids) {
+        let project = old_project_ids[i];
+        console.log("Project deleted, archiving: " + project);
+        if (!fs.existsSync(`./project/_archive/`)) {
+            fs.mkdirSync(`./project/_archive/`);
+        }
+        fs.renameSync(`./project/${project}.html`, `./project/_archive/${project}.html`);
+        console.log("Archived " + project);
+    }
     console.log("Compiling index");
-    let project_html = prettify(document.querySelector("#project-shelf").innerHTML, {indent_size: 4, indent_char: " ", indent_level: 4});
+    let project_html = prettify(document.querySelector("#project-shelf").innerHTML, { indent_size: 4, indent_char: " ", indent_level: 4 });
     let compiled = hb.compile(index_template);
-    let html = compiled({project_html: project_html});
+    let html = compiled({ project_html: project_html });
     fs.writeFileSync(`./index.html`, html);
     console.log("Compiled index");
 }
