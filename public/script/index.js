@@ -9,6 +9,7 @@ const ro = new IntersectionObserver(el => {
 });
 
 document.querySelectorAll(".scroll-anim").forEach(el => {
+    el.classList.add("fade-on-scroll"); // therefore only works with js on
     ro.observe(el);
 });
 

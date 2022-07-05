@@ -9,7 +9,6 @@ function add_card(document, title, description, image, id) {
     hyper.href = `./project/${id}`;
     hyper.classList.add("project");
     hyper.classList.add("scroll-anim");
-    hyper.classList.add("fade-on-scroll");
     hyper.id = "project-" + id.replace(/\s/g, "").replace(/\./g, "");
     hyper.style.backgroundImage = "url(\"" + image + "\")";
     var blocker = document.createElement("div");

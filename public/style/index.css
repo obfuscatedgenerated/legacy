@@ -1,5 +1,6 @@
 body {
     background: #1e292e;
+    --container-width: 250; /* default if no js */
 }
 
 header>img {
@@ -106,6 +107,12 @@ header {
         width: 25%;
         height: auto;
     }
+}
+
+.scroll-anim { /* default for if no js */
+    opacity: 1;
+    transform: none;
+    transition: none;
 }
 
 .fade-on-scroll {
