@@ -5,56 +5,57 @@
             "title": "ClickbaitDetector",
             "description": "An AI written in Python with Tensorflow that detects clickbait.",
             "image": "https://github.com/obfuscatedgenerated/ClickbaitDetector/raw/main/logo-bg.png",
-            "link": "https://github.com/obfuscatedgenerated/ClickbaitDetector"
+            "repo_url": "https://github.com/obfuscatedgenerated/ClickbaitDetector"
         },
         {
             "id": "passwordgenerator",
             "title": "PasswordGenerator",
             "description": "[WIP] A Java program that generates passwords to the user's parameters.",
             "image": "/public/logo.png",
-            "link": "https://github.com/obfuscatedgenerated/PasswordGenerator"
+            "repo_url": "https://github.com/obfuscatedgenerated/PasswordGenerator"
         },
         {
             "id": "gmodcssdownloader",
             "title": "gmodCSSDownloader",
             "description": "A small Python program that uses SteamCMD to install CS:Source assets for Garry's Mod easily, quickly and legally.",
             "image": "https://github.com/obfuscatedgenerated/gmodCSSDownloader/raw/main/portfolio-img.png",
-            "link": "https://github.com/obfuscatedgenerated/gmodCSSDownloader"
+            "repo_url": "https://github.com/obfuscatedgenerated/gmodCSSDownloader"
         },
         {
             "id": "xtask",
             "title": "xTask",
             "description": "An online UI for internet multitasking on any device.",
             "image": "https:///xtask.ollieg.codes/public/icon.png",
-            "link": "https://xtask.ollieg.codes/"
+            "repo_url": "https://github.com/obfuscatedgenerated/xtask",
+            "live_url": "https://xtask.ollieg.codes"
         },
         {
             "id": "animopoly",
             "title": "Animopoly",
             "description": "A fun animal purchasing board game with absolutely no relation to other board games whatsoever!",
             "image": "/public/logo.png",
-            "link":"https://github.com/obfuscatedgenerated/animopoly"
+            "repo_url":"https://github.com/obfuscatedgenerated/animopoly"
         },
         {
             "id": "tinytools",
             "title": "TinyTools",
             "description": "A collection of small tools for use in the terminal written in Python.",
             "image": "/public/logo.png",
-            "link": "https://github.com/obfuscatedgenerated/TinyTools"
+            "repo_url": "https://github.com/obfuscatedgenerated/TinyTools"
         },
         {
             "id": "ytwordcloud",
             "title": "ytWordCloud",
             "description": "A Python program that generates a word cloud from a YouTube channel.",
             "image": "https://github.com/obfuscatedgenerated/ytWordCloud/raw/main/example.png",
-            "link": "https://github.com/obfuscatedgenerated/ytWordCloud"
+            "repo_url": "https://github.com/obfuscatedgenerated/ytWordCloud"
         },
         {
             "id": "typethon",
             "title": "Typethon",
             "description": "Typethon is an extremely lightweight and simple module for strongly typed Python.",
             "image": "/public/logo.png",
-            "link":"https://github.com/obfuscatedgenerated/Typethon"
+            "repo_url":"https://github.com/obfuscatedgenerated/Typethon"
         }
     ]
 }

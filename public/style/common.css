@@ -90,11 +90,11 @@ h2 {
 }
 
 .force-fade-out {
-    animation: force-fade 0.25s ease-in-out 1 forwards;
+    animation: force-fade 0.25s ease-in-out 1 backwards;
 }
 
 .force-fade-in {
-    animation: force-fade 0.25s ease-in-out 1 backwards;
+    animation: force-fade 0.25s ease-in-out 1 forwards;
 }
 
 @keyframes force-fade {
