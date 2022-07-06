@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico">
+    <link rel="icon" type="image/png" href="/public/logo.png">
+    <link rel="shortcut icon" type="image/png" href="/public/logo.png">
+    <link rel="apple-touch-icon" href="/public/logo.png">
+    <meta property="og:image" content="/public/logo.png">
+    <meta name="twitter:title" content="Skills Table">
+    <meta name="twitter:description" content="A table comparing my skills in programming languages and tech">
+    <meta name="twitter:image" content="/public/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="Skills Table" />
+    <meta property="og:description" content="A table comparing my skills in programming languages and tech" />
+    <meta name="description" content="A table comparing my skills in programming languages and tech" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ollieg.codes" />
+    <meta charset="UTF-8">
+    <script src="/public/script/skills.js" defer></script>
+    <link rel="stylesheet" href="/public/style/fonts.css" />
+    <link rel="stylesheet" href="/public/style/common.css" />
+    <link rel="stylesheet" href="/public/style/skills.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css"
+        integrity="sha512-8Vtie9oRR62i7vkmVUISvuwOeipGv8Jd+Sur/ORKDD5JiLgTGeBSkI3ISOhc730VGvA5VVQPwKIKlmi+zMZ71w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css"
+        integrity="sha512-6/gTF62BJ06BajySRzTm7i8N2ZZ6StspU9uVWDdoBiuuNu5rs1a8VwiJ7skCz2BcvhpipLKfFerXkuzs+npeKA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Table</title>
+</head>
+
+<body>
+    <noscript>This page requires JavaScript for extra features!</noscript>
+    <table>
+        <thead>
+            <tr>
+                <th class="icon-head">Icon</th>
+                <th class="name-head sortable">Name <i class="if-js fa-solid fa-minus"></i></th>
+                <th class="time-head sortable">Time used <i class="if-js fa-solid fa-minus"></i></th>
+                <th class="experience-head sortable">Experience level <i class="if-js fa-solid fa-minus"></i></th>
+                <th class="example-head">Example projects</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each skills}}
+            <tr>
+                <td class="icon">
+                    {{#if icon-is-fa}}
+                    <i class="icon-content {{icon}}"></i>
+                    {{else}}
+                    <img class="icon-content" src={{icon}} alt="{{name}} icon" />
+                    {{/if}}
+                </td>
+                <td class="name">
+                    <p class="name-content">{{name}}</p>
+                </td>
+                <td class="time">
+                    <p class="time-content">{{time}}</p>
+                </td>
+                <td class="experience">
+                    <p class="experience-content">{{experience}}</p>
+                </td>
+                <td class="example">
+                    {{#if examples}}
+                    {{#each examples}}
+                    <a class="example-content" href="{{url}}">{{text}}</p></a>
+                    {{/each}}
+                    {{else}}
+                    <p class="example-content">No examples</p>
+                    {{/if}}
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>

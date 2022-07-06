@@ -36,6 +36,9 @@ function rebuild_all() {
 
     const { document } = ld.parseHTML("<!DOCTYPE html><html lang=\"en\"><body><div id=\"project-shelf\"></div></body></html>");
 
+    let skills = JSON.parse(fs.readFileSync("./skills.json", "utf8")).skills;
+    let skills_template = fs.readFileSync("./src/skills.handlebars", "utf8");
+
     for (let i in project_ids) {
         let project = project_ids[i];
         let data = projects.find(p => { return p.id == project; });
@@ -65,6 +68,11 @@ function rebuild_all() {
     let html = compiled({ project_html: project_html });
     fs.writeFileSync(`./index.html`, html);
     console.log("Compiled index");
+    console.log("Compiling skills");
+    let compiled_skills = hb.compile(skills_template);
+    let html_skills = compiled_skills({ skills: skills });
+    fs.writeFileSync(`./skills/index.html`, html_skills);
+    console.log("Compiled skills");
 }
 
 if (require.main === module) {

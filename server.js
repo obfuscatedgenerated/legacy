@@ -22,6 +22,12 @@ app.get("/", function (req, res) {
   console.log("Served index to " + ip)
 })
 
+app.get("/skills/", function (req, res) {
+  var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  res.sendFile(__dirname + "/skills/index.html")
+  console.log("Served skills to " + ip)
+})
+
 app.get("/project/:project", function (req, res) {
   var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
   res.sendFile(__dirname + "/project/" + req.params.project + ".html") // outrageously stupid for security but this is just a dev server, real site is on gh pages where this is done automatically
