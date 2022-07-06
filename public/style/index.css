@@ -1,6 +1,6 @@
 body {
     background: #1e292e;
-    --container-width: 250; /* default if no js */
+    --container-width: 190; /* default if no js */
 }
 
 header>img {
