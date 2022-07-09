@@ -83,7 +83,6 @@ function sort(column_el) {
 
     document.querySelector("tbody").innerHTML = "";
     entries.forEach(([label, row]) => {
-        console.log(label);
         document.querySelector("tbody").appendChild(row);
     });
 }
