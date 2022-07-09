@@ -7,8 +7,11 @@ sortable.forEach((x) => { x.addEventListener("click", () => { sort(x); }); });
 let selected = null;
 let selected_dir = false; // false=asc, true=desc
 
+const number_first_collator = new Intl.Collator(undefined, {numeric: true, sensitivity: "base"});
+
 function sort(column_el) {
     let old_class_rm = selected_dir ? "fa-caret-up" : "fa-caret-down";
+
     if (selected !== column_el) {
         if (selected) { selected.querySelector("i").classList.remove(old_class_rm); selected.querySelector("i").classList.add("fa-minus"); }
         selected = column_el;
@@ -17,11 +20,70 @@ function sort(column_el) {
     } else {
         selected_dir = !selected_dir;
     }
+
     let class_rm = selected_dir ? "fa-caret-up" : "fa-caret-down";
     let class_add = selected_dir ? "fa-caret-down" : "fa-caret-up";
     column_el.querySelector("i").classList.remove(class_rm);
     column_el.querySelector("i").classList.add(class_add);
 
     let column_name = Array.from(column_el.classList).reduce(x => { if (x.endsWith("-head")) { return x.replace("-head", ""); } });
-    console.log("Sorting " + column_name);
+
+    let rows = document.querySelectorAll("." + column_name);
+    let rows_by_property = {};
+    rows.forEach((el) => {
+        let label = el.querySelector("." + column_name + "-content").innerText;
+        if (column_name === "experience") {
+            switch (label) {
+                case "Learning":
+                    label = 0;
+                    break;
+                case "Developing":
+                    label = 1;
+                    break;
+                case "Skilled":
+                    label = 2;
+                    break;
+                case "Expert":
+                    label = 3;
+                    break;
+                default:
+                    label = -1;
+                    console.warn("Unknown experience label: " + label);
+                    break;
+            };
+        } else if (column_name === "time") {
+            int_label = parseInt(label);
+            if (Number.isNaN(int_label)) {
+                label = -1;
+                console.warn("Time label is not a number: " + label);
+            } else {
+                if (label.includes("hour")) {
+                    label = int_label;
+                } else if (label.includes("day")) {
+                    label = int_label * 24;
+                } else if (label.includes("week")) {
+                    label = int_label * 24 * 7;
+                } else if (label.includes("month")) {
+                    label = int_label * 24 * 30;
+                } else if (label.includes("year")) {
+                    label = int_label * 24 * 365;
+                } else {
+                    label = int_label;
+                    console.warn("Didn't receive a valid time indicator, assuming hours: " + label);
+                }
+            }
+        }
+        let row = el.parentElement;
+        rows_by_property[label + row.querySelector(".name-content").innerText] = row; // prevents overlap as a "tiebreaker"
+    });
+
+    let entries = Object.entries(rows_by_property);
+    entries.sort(number_first_collator.compare);
+    if (selected_dir) { entries.reverse(); }
+
+    document.querySelector("tbody").innerHTML = "";
+    entries.forEach(([label, row]) => {
+        console.log(label);
+        document.querySelector("tbody").appendChild(row);
+    });
 }

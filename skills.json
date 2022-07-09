@@ -1,6 +1,7 @@
 {
     "skills": [
-        {"icon-is-fa": false, "icon": "test.png", "name": "Test", "time": "1 hour", "experience": "Expert"},
-        {"icon-is-fa": true, "icon": "fa-brands fa-python", "name": "Test 2", "time": "1 hour", "experience": "Expert"}
+        {"icon-is-fa": false, "icon": "test.png", "name": "b", "time": "6 days", "experience": "Skilled"},
+        {"icon-is-fa": true, "icon": "fa-brands fa-python", "name": "a", "time": "1 hour", "experience": "Developing"},
+        {"icon-is-fa": true, "icon": "fa-brands fa-python", "name": "c", "time": "2 years", "experience": "Expert"}
     ]
 }
