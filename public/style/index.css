@@ -1,6 +1,7 @@
 body {
     background: #1e292e;
-    --container-width: 190; /* default if no js */
+    --container-width: 190;
+    /* default if no js */
 }
 
 header>img {
@@ -12,7 +13,8 @@ header>img {
     transition: max-height 0.75s;
 }
 
-header:hover, header>img:hover {
+header:hover,
+header>img:hover {
     max-height: 75vh;
 }
 
@@ -109,7 +111,8 @@ header {
     }
 }
 
-.scroll-anim { /* default for if no js */
+.scroll-anim {
+    /* default for if no js */
     opacity: 1;
     transform: none;
     transition: none;
@@ -244,7 +247,7 @@ footer img {
     height: auto;
 }
 
-#contribute > h2 {
+#contribute>h2 {
     margin-bottom: 7.5vh;
 }
 
