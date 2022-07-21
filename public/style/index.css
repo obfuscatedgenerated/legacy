@@ -1,6 +1,5 @@
 body {
     background: #1e292e;
-    --container-width: 190; /* default if no js */
 }
 
 header>img {
@@ -187,14 +186,14 @@ header {
 .project-title {
     width: 95%;
     text-align: center;
-    font-size: calc(var(--container-width) * 0.085px);
+    font-size: 1.35vw;
 }
 
 .project-description {
     width: 75%;
     font-size: 1%;
     text-align: center;
-    font-size: calc(var(--container-width) * 0.05px);
+    font-size: 0.75vw;
 }
 
 .project-title {
@@ -217,14 +216,6 @@ header {
 
     .project-blocker {
         opacity: 0.75;
-    }
-
-    .project-title {
-        font-size: calc(var(--container-width) * 0.085px);
-    }
-
-    .project-description {
-        font-size: calc(var(--container-width) * 0.05px);
     }
 }
 

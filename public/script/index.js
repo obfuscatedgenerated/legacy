@@ -13,28 +13,6 @@ document.querySelectorAll(".scroll-anim").forEach(el => {
     ro.observe(el);
 });
 
-document.querySelectorAll(".project").forEach(root => {
-    root.onmouseenter = () => {
-        document.querySelectorAll("#" + root.id + " > .project-blocker").forEach(el => {
-            el.style.setProperty("--container-width", el.getBoundingClientRect().width);
-        });
-    }
-    root.onmouseexit = () => {
-        document.querySelectorAll("#" + root.id + " > .project-blocker").forEach(el => {
-            el.style.setProperty("--container-width", el.getBoundingClientRect().width);
-        });
-    }
-    root.addEventListener("touchstart", () => {
-        document.querySelectorAll("#" + root.id + " > .project-blocker").forEach(el => {
-            el.style.setProperty("--container-width", el.getBoundingClientRect().width);
-        });
-    });
-    root.onclick = (e) => { link_transition(e, root) };
-    document.querySelectorAll("#" + root.id + " > .project-blocker").forEach(el => {
-        el.style.setProperty("--container-width", el.getBoundingClientRect().width);
-    });
-});
-
 function clean_fade_in() {
     document.body.classList.remove("fade-out");
     document.body.classList.add("fade-in");
@@ -130,14 +108,6 @@ function link_transition(e, el) {
 //    // as much as I demonise innerHTML over innerText and inline styles over a sheet, it's not worth the hassle for something without user interaction
 //    document.querySelector("#project-shelf").innerHTML = "<h2>Error loading projects. Please try again later, or <a style=\"color: #fff;\" href=\"/public/projects.json\">view the raw JSON data</a>.</h2>";
 //});
-
-window.onresize = () => {
-    if (window.matchMedia("screen and (max-width: 768px)").matches) {
-        document.querySelectorAll(".project-blocker").forEach(el => {
-            el.style.setProperty("--container-width", el.getBoundingClientRect().width);
-        });
-    }
-};
 
 //if (window.location.hash == "#robert") {
 //    setTimeout(() => {document.querySelector("#robert").scrollIntoView();}, 1500); // makes it reappear in case it's the first view (because content is added and moved for the first time)
