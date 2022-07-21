@@ -63,5 +63,5 @@ img.icon-content {
 }
 
 i.icon-content {
-    font-size: 2vw;
+    font-size: calc(1vw + 1rem);
 }

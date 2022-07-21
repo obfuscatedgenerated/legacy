@@ -60,7 +60,7 @@ header {
     box-shadow: 0 0 20px #111;
     width: 100%;
     height: 10vh;
-    font-size: 1vw;
+    font-size: calc(0.5vw + 0.5rem);
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -100,7 +100,7 @@ header {
     .langtable {
         height: auto;
         flex-direction: column;
-        font-size: 5vw;
+        font-size: calc(0.5vw + 2rem);
     }
 
     .lang img {
@@ -142,7 +142,7 @@ header {
 }
 
 .project {
-    width: 20%;
+    width: calc(20% + 0.5rem);
     aspect-ratio: calc(3/4);
     border: #333 solid 1px;
     background-color: #32454e;
@@ -152,7 +152,6 @@ header {
     transition: all 0.25s ease-in-out;
     text-decoration: none;
     color: #fff;
-    font-size: 1.5%;
     font-family: "Ubuntu", Ubuntu, Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -188,14 +187,13 @@ header {
 .project-title {
     width: 95%;
     text-align: center;
-    font-size: 1.35vw;
+    font-size: calc(1vw + 0.25rem);
 }
 
 .project-description {
     width: 75%;
-    font-size: 1%;
     text-align: center;
-    font-size: 0.75vw;
+    font-size: calc(0.75vw + 0.25rem);
 }
 
 .project-title {
@@ -213,7 +211,6 @@ header {
 @media screen and (max-width: 768px) {
     .project {
         width: 100%;
-        font-size: 10vw;
     }
 
     .project-blocker {
@@ -221,11 +218,11 @@ header {
     }
 
     .project-title {
-        font-size: 5vw;
+        font-size: calc(2vw + 2rem);
     }
 
     .project-description {
-        font-size: 3vw;
+        font-size: calc(1vw + 1rem);
     }
 }
 
