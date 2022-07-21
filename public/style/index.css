@@ -217,6 +217,14 @@ header {
     .project-blocker {
         opacity: 0.75;
     }
+
+    .project-title {
+        font-size: 5vw;
+    }
+
+    .project-description {
+        font-size: 3vw;
+    }
 }
 
 #secret {
