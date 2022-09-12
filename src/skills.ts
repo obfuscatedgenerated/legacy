@@ -1,3 +1,5 @@
+import * as moment from 'moment';
+
 let js_style = document.createElement("style");
 js_style.innerHTML = `.if-js { visibility: inherit; }`;
 document.head.appendChild(js_style);
@@ -7,7 +9,23 @@ sortable.forEach((x) => { x.addEventListener("click", () => { sort(x); }); });
 let selected = null;
 let selected_dir = false; // false=asc, true=desc
 
-const number_first_collator = new Intl.Collator(undefined, {numeric: true, sensitivity: "base"});
+const number_first_collator = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
+
+let dates = new Map();
+
+document.querySelectorAll(".time-content").forEach((el: HTMLParagraphElement) => {
+    let date = moment(el.innerText, "DD/MM/YYYY");
+    if (date.isValid()) {
+        dates.set(el.parentElement.parentElement.id, date.unix());
+        el.title = el.innerText;
+        el.innerText = date.fromNow();
+    } else {
+        dates.set(el.parentElement.parentElement.id, -1);
+    }
+});
+
+let up: HTMLParagraphElement = document.querySelector("#updated");
+up.innerText = "Last updated: " + moment(up.innerText, "DD/MM/YYYY").format("LL") + ". Intervals automatically increment with JavaScript enabled. Hover intervals for a rough start date.";
 
 function sort(column_el) {
     let old_class_rm = selected_dir ? "fa-caret-up" : "fa-caret-down";
@@ -29,7 +47,7 @@ function sort(column_el) {
     let column_name = Array.from(column_el.classList).reduce((x: string) => { if (x.endsWith("-head")) { return x.replace("-head", ""); } });
 
     let rows = document.querySelectorAll("." + column_name);
-    let rows_by_property: {[key: string]: HTMLElement} = {};
+    let rows_by_property: { [key: string]: HTMLElement } = {};
     rows.forEach((el) => {
         let label: (string | number) = (el.querySelector("." + column_name + "-content") as HTMLElement).innerText;
         if (column_name === "experience") {
@@ -47,31 +65,12 @@ function sort(column_el) {
                     label = 3;
                     break;
                 default:
-                    label = -1;
                     console.warn("Unknown experience label: " + label);
+                    label = -1;
                     break;
             };
         } else if (column_name === "time") {
-            let int_label = parseInt(label);
-            if (Number.isNaN(int_label)) {
-                label = -1;
-                console.warn("Time label is not a number: " + label);
-            } else {
-                if (label.includes("hour")) {
-                    label = int_label;
-                } else if (label.includes("day")) {
-                    label = int_label * 24;
-                } else if (label.includes("week")) {
-                    label = int_label * 24 * 7;
-                } else if (label.includes("month")) {
-                    label = int_label * 24 * 30;
-                } else if (label.includes("year")) {
-                    label = int_label * 24 * 365;
-                } else {
-                    label = int_label;
-                    console.warn("Didn't receive a valid time indicator, assuming hours: " + label);
-                }
-            }
+            label = dates.get(el.parentElement.id);
         }
         let row = el.parentElement;
         rows_by_property[label + (row.querySelector(".name-content") as HTMLParagraphElement).innerText] = row; // prevents overlap as a "tiebreaker"

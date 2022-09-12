@@ -1,18 +1,18 @@
 {
     "skills": [
-        {"icon-is-fa": true, "icon": "fa-brands fa-python", "name": "Python", "time": "8 years", "experience": "Expert"},
-        {"icon-is-fa": true, "icon": "fa-brands fa-js", "name": "JavaScript", "time": "5 years", "experience": "Skilled"},
-        {"icon-is-fa": true, "icon": "fa-brands fa-html5", "name": "HTML5", "time": "5 years", "experience": "Expert"},
-        {"icon-is-fa": true, "icon": "fa-brands fa-java", "name": "Java", "time": "4 months", "experience": "Skilled"},
-        {"icon-is-fa": true, "icon": "fa-brands fa-discord", "name": "discord.js", "time": "2 years", "experience": "Skilled"},
-        {"icon-is-fa": false, "icon": "https://pennylane.ai/img/xanadu_x.png", "name": "Quantum Computing (PennyLane)", "time": "3 weeks", "experience": "Learning"},
-        {"icon-is-fa": false, "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png", "name": "TypeScript", "time": "7 months", "experience": "Developing"},
-        {"icon-is-fa": false, "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png", "name": "TensorFlow", "time": "1 year", "experience": "Developing"},
-        {"icon-is-fa": false, "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/FFmpeg_icon.svg/1200px-FFmpeg_icon.svg.png", "name": "FFMPEG", "time": "1 year", "experience": "Developing"},
-        {"icon-is-fa": true, "icon": "fa-brands fa-node-js", "name": "NodeJS", "time": "3 years", "experience": "Skilled"},
-        {"icon-is-fa": true, "icon": "fa-solid fa-e", "name": "Express.js", "time": "3 years", "experience": "Skilled"},
-        {"icon-is-fa": false, "icon": "https://miro.medium.com/max/790/0*VBze2-2kX06fDv8A.", "name": "p5.js", "time": "3 months", "experience": "Skilled"},
-        {"icon-is-fa": false, "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/1200px-Lua-Logo.svg.png", "name": "Lua", "time": "8 months", "experience": "Developing"}
+        {"icon-is-fa": true, "icon": "fa-brands fa-python", "name": "Python", "since": "03/07/2014", "experience": "Expert"},
+        {"icon-is-fa": true, "icon": "fa-brands fa-js", "name": "JavaScript", "since": "01/01/2017", "experience": "Skilled"},
+        {"icon-is-fa": true, "icon": "fa-brands fa-html5", "name": "HTML5", "since": "01/01/2017", "experience": "Expert"},
+        {"icon-is-fa": true, "icon": "fa-brands fa-java", "name": "Java", "since": "26/11/2021", "experience": "Skilled"},
+        {"icon-is-fa": true, "icon": "fa-brands fa-discord", "name": "discord.js", "since": "05/05/2021", "experience": "Skilled"},
+        {"icon-is-fa": false, "icon": "https://pennylane.ai/img/xanadu_x.png", "name": "Quantum Computing (PennyLane)", "since": "18/06/2022", "experience": "Learning"},
+        {"icon-is-fa": false, "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png", "name": "TypeScript", "since": "07/12/2021", "experience": "Skilled"},
+        {"icon-is-fa": false, "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png", "name": "TensorFlow", "since": "19/12/2020", "experience": "Developing"},
+        {"icon-is-fa": false, "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/FFmpeg_icon.svg/1200px-FFmpeg_icon.svg.png", "name": "FFMPEG", "since": "01/10/2020", "experience": "Developing"},
+        {"icon-is-fa": true, "icon": "fa-brands fa-node-js", "name": "NodeJS", "since": "01/10/2018", "experience": "Skilled"},
+        {"icon-is-fa": true, "icon": "fa-solid fa-e", "name": "Express.js", "since": "01/10/2018", "experience": "Skilled"},
+        {"icon-is-fa": false, "icon": "https://miro.medium.com/max/790/0*VBze2-2kX06fDv8A.", "name": "p5.js", "since": "01/03/2022", "experience": "Skilled"},
+        {"icon-is-fa": false, "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/1200px-Lua-Logo.svg.png", "name": "Lua", "since": "01/12/2020", "experience": "Developing"}
     ],
     "updated": "12/09/2022"
 }

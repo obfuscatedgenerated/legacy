@@ -8,6 +8,9 @@ let projects = JSON.parse(fs.readFileSync("./projects.json", "utf8")).projects;
 let project_ids = projects.map(p => { return p.id; });
 let project_template = fs.readFileSync("./src/project.handlebars", "utf8");
 
+let skills = JSON.parse(fs.readFileSync("./skills.json", "utf8"));
+let skills_template = fs.readFileSync("./src/skills.handlebars", "utf8");
+
 fs.watchFile("./projects.json", (curr, prev) => {
     let old_projects = projects;
     let old_project_ids = project_ids;
@@ -43,6 +46,32 @@ fs.watchFile("./projects.json", (curr, prev) => {
         console.log("Archived " + project);
     }
 });
+
+function build_skills() {
+    let compiled_skills = hb.compile(skills_template);
+    let html_skills = compiled_skills({ skills: skills.skills, updated: skills.updated });
+    fs.writeFileSync(`./skills/index.html`, html_skills);
+    console.log("Compiled skills");
+}
+
+fs.watchFile("./src/skills.handlebars", (curr, prev) => {
+    let old_skills_template = skills_template;
+    skills_template = fs.readFileSync("./src/skills.handlebars", "utf8");
+    if (old_skills_template !== skills_template) {
+        console.log("Skills template changed, recompiling only skills");
+        build_skills();
+    }
+});
+
+fs.watchFile("./src/skills.json", (curr, prev) => {
+    let old_skills = skills;
+    skills = JSON.parse(fs.readFileSync("./skills.json", "utf8"));
+    if (!equal(skills, old_skills)) {
+        console.log("Skills data changed, recompiling only skills");
+        build_skills();
+    }
+});
+
 
 fs.watchFile("./src/project.handlebars", (curr, prev) => {
     let old_project_template = project_template;

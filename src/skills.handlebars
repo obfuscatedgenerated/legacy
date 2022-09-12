@@ -42,14 +42,14 @@
             <tr>
                 <th class="icon-head">Icon</th>
                 <th class="name-head sortable">Name <i class="if-js fa-solid fa-minus"></i></th>
-                <th class="time-head sortable">Time used <i class="if-js fa-solid fa-minus"></i></th>
+                <th class="time-head sortable">Used since <i class="if-js fa-solid fa-minus"></i></th>
                 <th class="experience-head sortable">Experience level <i class="if-js fa-solid fa-minus"></i></th>
                 <th class="example-head">Example projects</th>
             </tr>
         </thead>
         <tbody>
             {{#each skills}}
-            <tr>
+            <tr id="skill-{{@index}}"">
                 <td class="icon">
                     {{#if icon-is-fa}}
                     <i class="icon-content {{icon}}"></i>
@@ -61,7 +61,7 @@
                     <p class="name-content">{{name}}</p>
                 </td>
                 <td class="time">
-                    <p class="time-content">{{time}}</p>
+                    <p class="time-content">{{since}}</p>
                 </td>
                 <td class="experience">
                     <p class="experience-content">{{experience}}</p>
@@ -79,5 +79,5 @@
             {{/each}}
         </tbody>
     </table>
-    <p>Last updated: {{updated}}</p>
+    <p id="updated">Last updated: {{updated}}.</p>
 </body>
