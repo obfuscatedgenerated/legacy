@@ -264,3 +264,28 @@ footer img {
     width: 100%;
     text-align: center;
 }
+
+#ribbon {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #111;
+    color: #fff;
+    padding: 0.5vh
+}
+
+#ease_button {
+    color: #fff;
+    display: inline;
+    font-size: large;
+    font-family: OpenDyslexic3, "OpenDyslexic3", "Comic Sans MS", Arial, sans-serif;
+}
+
+#ease_button:not(b) {
+    color: #ccc;
+}
+
+#ease_button > b {
+    color: #fff;
+}

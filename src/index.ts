@@ -1,3 +1,9 @@
+import * as a11y from "./a11y";
+
+//a11y.makeContentBionic();
+
+(<any>window).test = a11y.makeContentBionic;
+
 const params = new URLSearchParams(window.location.search);
 
 const ro = new IntersectionObserver(el => {

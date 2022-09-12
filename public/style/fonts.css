@@ -5,13 +5,34 @@
 }
 
 @font-face {
+    font-family: "Ubuntu";
+    src: url(/public/Ubuntu-Bold.ttf),
+        url("/public/Ubuntu-Bold.woff");
+    font-weight: bold;
+}
+
+@font-face {
     font-family: "Open Sans";
     src: url(/public/OpenSans-Regular.ttf),
         url("/public/OpenSans-Regular.woff");
 }
 
 @font-face {
-    font-family: "WeblySleek UI";
-    src: url(/public/weblysleekuisb.ttf),
-        url("/public/weblysleekuisb.woff");
+    font-family: "Open Sans";
+    src: url(/public/OpenSans-Bold.ttf),
+        url("/public/OpenSans-Bold.woff");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "OpenDyslexic3";
+    src: url(/public/OpenDyslexic3-Regular.ttf),
+        url("/public/OpenDyslexic3-Regular.woff");
+}
+
+@font-face {
+    font-family: "OpenDyslexic3";
+    src: url(/public/OpenDyslexic3-Bold.ttf),
+        url("/public/OpenDyslexic3-Bold.woff");
+    font-weight: bold;
 }
