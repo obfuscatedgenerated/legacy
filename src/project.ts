@@ -1,4 +1,4 @@
-let back = document.querySelector("#back");
+let back: HTMLAnchorElement = document.querySelector("#back");
 back.onclick = (e) => {
     e.preventDefault();
     document.body.classList.remove("fade-in-bg");

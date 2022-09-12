@@ -1,35 +1,8 @@
 const hb = require("handlebars");
 const fs = require("fs");
 const equal = require("fast-deep-equal");
-const ld = require("linkedom");
 
 const rebuild_all = require("./compile.js");
-
-function add_card(document, title, description, image, id) {
-    // this needs cleaning up!
-    var hyper = document.createElement("a");
-    hyper.href = `./project/${id}`;
-    hyper.onclick = (e) => { link_transition(e, hyper) };
-    hyper.classList.add("project");
-    hyper.classList.add("scroll-anim");
-    hyper.classList.add("fade-on-scroll");
-    hyper.id = "project-" + id.replace(/\s/g, "").replace(/\./g, "");
-    hyper.style.backgroundImage = "url(\"" + image + "\")";
-    var blocker = document.createElement("div");
-    blocker.classList.add("project-blocker");
-    var texttitle = document.createElement("p");
-    // setting innerText is not implemented in linkedom, using textContent instead.
-    texttitle.textContent = title;
-    texttitle.classList.add("project-title");
-    var textdescription = document.createElement("p");
-    // setting innerText is not implemented in linkedom, using textContent instead.
-    textdescription.textContent = description;
-    textdescription.classList.add("project-description");
-    blocker.appendChild(texttitle);
-    blocker.appendChild(textdescription);
-    hyper.appendChild(blocker);
-    document.querySelector("#project-shelf").appendChild(hyper);
-}
 
 let projects = JSON.parse(fs.readFileSync("./projects.json", "utf8")).projects;
 let project_ids = projects.map(p => { return p.id; });

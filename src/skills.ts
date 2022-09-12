@@ -26,12 +26,12 @@ function sort(column_el) {
     column_el.querySelector("i").classList.remove(class_rm);
     column_el.querySelector("i").classList.add(class_add);
 
-    let column_name = Array.from(column_el.classList).reduce(x => { if (x.endsWith("-head")) { return x.replace("-head", ""); } });
+    let column_name = Array.from(column_el.classList).reduce((x: string) => { if (x.endsWith("-head")) { return x.replace("-head", ""); } });
 
     let rows = document.querySelectorAll("." + column_name);
-    let rows_by_property = {};
+    let rows_by_property: {[key: string]: HTMLElement} = {};
     rows.forEach((el) => {
-        let label = el.querySelector("." + column_name + "-content").innerText;
+        let label: (string | number) = (el.querySelector("." + column_name + "-content") as HTMLElement).innerText;
         if (column_name === "experience") {
             switch (label) {
                 case "Learning":
@@ -52,7 +52,7 @@ function sort(column_el) {
                     break;
             };
         } else if (column_name === "time") {
-            int_label = parseInt(label);
+            let int_label = parseInt(label);
             if (Number.isNaN(int_label)) {
                 label = -1;
                 console.warn("Time label is not a number: " + label);
@@ -74,15 +74,20 @@ function sort(column_el) {
             }
         }
         let row = el.parentElement;
-        rows_by_property[label + row.querySelector(".name-content").innerText] = row; // prevents overlap as a "tiebreaker"
+        rows_by_property[label + (row.querySelector(".name-content") as HTMLParagraphElement).innerText] = row; // prevents overlap as a "tiebreaker"
     });
 
     let entries = Object.entries(rows_by_property);
+    // @ts-ignore:  Argument of type '(x: string, y: string) => number' is not assignable to parameter of type '(a: [string, HTMLElement], b: [string, HTMLElement]) => number'
+    // ignore because it needs to sort by first of each array but still sort the whole array
     entries.sort(number_first_collator.compare);
+
     if (selected_dir) { entries.reverse(); }
 
     document.querySelector("tbody").innerHTML = "";
-    entries.forEach(([label, row]) => {
+    entries.forEach(([label, row]: [string, HTMLElement]) => {
         document.querySelector("tbody").appendChild(row);
     });
 }
+
+// messy conversion to ts! needs refactor

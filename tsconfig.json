@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es5",
+    "outDir": "public/script",
+    "typeRoots": [
+      "./declarations",
+      "./node_modules/@types"
+    ],
+    "types": [
+      "node"
+    ],
+    "allowJs": true,
+  },
+  "exclude": [
+    "node_modules",
+    "public/script",
+    "webpack.config.js"
+  ]
+}
