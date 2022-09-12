@@ -36,7 +36,7 @@ function rebuild_all() {
 
     const { document } = ld.parseHTML("<!DOCTYPE html><html lang=\"en\"><body><div id=\"project-shelf\"></div></body></html>");
 
-    let skills = JSON.parse(fs.readFileSync("./skills.json", "utf8")).skills;
+    let skills = JSON.parse(fs.readFileSync("./skills.json", "utf8"));
     let skills_template = fs.readFileSync("./src/skills.handlebars", "utf8");
 
     for (let i in project_ids) {
@@ -70,7 +70,7 @@ function rebuild_all() {
     console.log("Compiled index");
     console.log("Compiling skills");
     let compiled_skills = hb.compile(skills_template);
-    let html_skills = compiled_skills({ skills: skills });
+    let html_skills = compiled_skills({ skills: skills.skills, updated: skills.updated });
     fs.writeFileSync(`./skills/index.html`, html_skills);
     console.log("Compiled skills");
 }
