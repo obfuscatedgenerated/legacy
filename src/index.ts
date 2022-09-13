@@ -1,8 +1,7 @@
 import * as a11y from "./a11y";
 
-//a11y.makeContentBionic();
-
-(<any>window).test = a11y.makeContentBionic;
+(<any>window).dyslexia = a11y.makeContentBionic;
+(<any>window).hide_ribbon = () => (<HTMLElement> document.querySelector("#ribbon")).style.display = "none";
 
 const params = new URLSearchParams(window.location.search);
 

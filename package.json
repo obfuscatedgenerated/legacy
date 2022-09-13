@@ -5,7 +5,7 @@
     "start": "node server.js",
     "build": "tsc --build && node compile.js",
     "hb": "node compile.js",
-    "bundle": "webpack",
+    "bundle": "webpack --mode=production",
     "watch-bundle": "webpack --watch --mode=development",
     "watch": "tsc --watch",
     "dev": "concurrently \"npm:start\" \"npm:watch\"",
@@ -17,6 +17,7 @@
     "js-beautify": "^1.14.4",
     "linkedom": "^0.14.12",
     "moment": "^2.29.4",
+    "sweetalert2": "^11.4.32",
     "text-vide": "^1.6.0"
   },
   "devDependencies": {
@@ -25,6 +26,7 @@
     "extra-watch-webpack-plugin": "^1.0.3",
     "fast-deep-equal": "^3.1.3",
     "handlebars": "^4.7.7",
+    "moment-locales-webpack-plugin": "^1.2.0",
     "rimraf": "^3.0.2",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.3.1",

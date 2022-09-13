@@ -1,6 +1,7 @@
 const path = require('path');
 const hb = require('handlebars');
 const fs = require('fs');
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 //const ExtraWatchWebpackPlugin = require("extra-watch-webpack-plugin");
 
 function hb_build() {
@@ -32,19 +33,20 @@ module.exports = (env, argv) => {
   console.log(`Building in ${argv.mode} mode`);
   console.log(`Using ${dt}`);
   return {
-    //plugins: [
-    //  {
-    //    apply: (compiler) => {
-    //      compiler.hooks.compile.tap("hbhook_compile", () => {
-    //        hb_build();
-    //      });
-    //    },
-    //  },
-    //  new ExtraWatchWebpackPlugin({
-    //    files: ['./src/*.handlebars'],
-    //  }),
-    //],
-    entry: { 
+    plugins: [
+      //  {
+      //    apply: (compiler) => {
+      //      compiler.hooks.compile.tap("hbhook_compile", () => {
+      //        hb_build();
+      //      });
+      //    },
+      //  },
+      //  new ExtraWatchWebpackPlugin({
+      //    files: ['./src/*.handlebars'],
+      //  }),
+      new MomentLocalesPlugin(),
+    ],
+    entry: {
       index: './src/index.ts',
       project: './src/project.ts',
       skills: './src/skills.ts',

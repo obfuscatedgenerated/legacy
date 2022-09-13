@@ -269,18 +269,26 @@ footer img {
     position: fixed;
     bottom: 0;
     width: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     background: #111;
     color: #fff;
     padding: 0.5vh
 }
 
-#ease_button {
+#ribbon a {
+    flex: 1;
+    text-align: center;
     color: #fff;
     display: inline;
     font-size: large;
-    font-family: OpenDyslexic3, "OpenDyslexic3", "Comic Sans MS", Arial, sans-serif;
     text-decoration: none;
+}
+
+#ease_button {
+    font-family: OpenDyslexic3, "OpenDyslexic3", "Comic Sans MS", Arial, sans-serif;
 }
 
 #ease_button:not(b) {
