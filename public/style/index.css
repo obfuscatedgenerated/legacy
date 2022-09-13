@@ -280,6 +280,7 @@ footer img {
     display: inline;
     font-size: large;
     font-family: OpenDyslexic3, "OpenDyslexic3", "Comic Sans MS", Arial, sans-serif;
+    text-decoration: none;
 }
 
 #ease_button:not(b) {

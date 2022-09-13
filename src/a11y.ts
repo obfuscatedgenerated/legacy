@@ -23,7 +23,7 @@ export let makeContentBionic = (): void => {
     }
     .project-title:not(b), .project-description:not(b) {
         font-weight: normal !important;
-        color: #ccc !important;
+        color: #bbb !important;
     }
 
     b {
@@ -36,6 +36,10 @@ export let makeContentBionic = (): void => {
     }
     .project-blocker:hover {
         opacity: 1;
+    }
+
+    .lang h3:not(b) {
+        color: #bbb;
     }
     `;
     document.head.appendChild(style);
