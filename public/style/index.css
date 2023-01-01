@@ -21,6 +21,7 @@ header>img:hover {
     min-height: 100vh;
     padding: 5vh 5vw;
     justify-content: space-evenly;
+    overflow: hidden;
 }
 
 .infobox {
