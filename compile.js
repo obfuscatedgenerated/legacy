@@ -11,7 +11,7 @@ function add_card(document, title, description, image, id) {
     hyper.classList.add("scroll-anim");
     hyper.id = "project-" + id.replace(/\s/g, "").replace(/\./g, "");
     hyper.style.backgroundImage = "url(\"" + image + "\")";
-    var blocker = document.createElement("div");
+    var blocker = document.createElement("article");
     blocker.classList.add("project-blocker");
     var texttitle = document.createElement("p");
     // setting innerText is not implemented in linkedom, using textContent instead.
