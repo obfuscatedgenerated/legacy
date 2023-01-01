@@ -97,6 +97,12 @@ h2 {
     animation: force-fade 0.25s ease-in-out 1 forwards;
 }
 
+figure {
+    /* make figure act like div */
+    margin-block: unset;
+    margin-inline: unset;
+}
+
 @keyframes force-fade {
     0% {
         opacity: 0;
