@@ -10,7 +10,8 @@
     "watch": "tsc --watch",
     "dev": "concurrently \"npm:start\" \"npm:watch\"",
     "dev-bundle": "concurrently \"npm:start\" \"npm:watch-bundle\" \"npm:dev-hb\"",
-    "clean": "rimraf public/src"
+    "clean": "rimraf public/script",
+    "publish": "npm run clean && npm run bundle && gh-pages deploy -d . -s \"{!(node_modules)/**/*.html,*.html,public/**/*,CNAME,_config.yml,robots.txt,LICENSE}\" -m \"update page\""
   },
   "dependencies": {
     "express": "^4.18.1",
