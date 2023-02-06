@@ -1,0 +1,1 @@
+(()=>{var e=document.querySelector("#back");e.onclick=function(o){o.preventDefault(),document.body.classList.remove("fade-in-bg"),document.body.classList.add("fade-out-bg"),setTimeout((function(){window.location.assign(e.href)}),250)}})();

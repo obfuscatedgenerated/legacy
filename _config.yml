@@ -1,0 +1,11 @@
+exclude:
+  - _config.yml
+  - .gitignore
+  - CNAME
+  - package.json
+  - package-lock.json
+  - compile.js
+  - watch.js
+  - server.js
+  - /src/
+  - /project/_archive/

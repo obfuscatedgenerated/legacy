@@ -1,0 +1,113 @@
+html, body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: OpenSans, "Open Sans", Arial, sans-serif;
+}
+
+h1 {
+    font-size: calc(1vw + 2rem);
+}
+
+h2 {
+    font-size: calc(0.25vw + 2rem);
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: calc(2.5vw + 2rem);
+        text-align: center;
+    }
+
+    h2 {
+        font-size: calc(1.25vw + 2rem);
+        text-align: center;
+    }
+}
+
+#links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #bbb;
+    font-size: calc(0.75vw + 2rem);
+    transition: all 0.25s ease-in-out;
+}
+
+.social-text {
+    margin-left: 0.5vw;
+}
+
+@media screen and (max-width: 768px) {
+    #linkbox {
+        align-items: center;
+    }
+
+    #links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-link {
+        font-size: calc(5vw + 2rem);
+    }
+
+    .social-text {
+        margin-left: 2.5vw;
+    }
+}
+
+.social-link:hover {
+    color: #fff;
+    text-shadow: rgba(255,255,255,0.9) 0px 0px 39px;
+}
+
+.fade-out {
+    transition: opacity 0.25s ease-in-out;
+    opacity: 0;
+}
+
+.fade-in {
+    transition: opacity 0.25s ease-in-out;
+    opacity: 1;
+}
+
+.force-fade-out {
+    animation: force-fade 0.25s ease-in-out 1 backwards;
+}
+
+.force-fade-in {
+    animation: force-fade 0.25s ease-in-out 1 forwards;
+}
+
+figure {
+    /* make figure act like div */
+    margin-block: unset;
+    margin-inline: unset;
+}
+
+@keyframes force-fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

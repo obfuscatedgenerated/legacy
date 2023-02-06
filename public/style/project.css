@@ -1,0 +1,41 @@
+body {
+    background-color: #1e292e;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    opacity: 1;
+}
+
+.fade-in-bg {
+    animation: force-fade 0.25s ease-in-out 1 forwards, fade-in-bg 0.25s ease-in-out 1 forwards;
+}
+
+.fade-out-bg {
+    animation: force-fade-out 0.25s ease-in-out 1 forwards, fade-out-bg 0.25s ease-in-out 1 forwards;
+}
+
+@keyframes fade-in-bg {
+    0% {
+        background-color: #1e292e;
+    }
+    100% {
+        background-color: var(--bg-color);
+    }
+}
+
+@keyframes fade-out-bg {
+    0% {
+        background-color: var(--bg-color);
+    }
+    100% {
+        background-color: #1e292e;
+    }
+}
+
+
+@keyframes force-fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
