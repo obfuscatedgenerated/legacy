@@ -37,11 +37,12 @@
             "repo_url":"https://github.com/obfuscatedgenerated/animopoly"
         },
         {
-            "id": "tinytools",
-            "title": "TinyTools",
-            "description": "A collection of small tools for use in the terminal written in Python.",
-            "image": "/public/logo.png",
-            "repo_url": "https://github.com/obfuscatedgenerated/TinyTools"
+            "id": "mewsic",
+            "title": "Mewsic",
+            "description": "[WIP] A PAW (purring audio workstation)",
+            "image": "https://mewsic.ollieg.codes/public/logo.png",
+            "repo_url": "https://github.com/obfuscatedgenerated/mewsic",
+            "live_url": "https://mewsic.ollieg.codes"
         },
         {
             "id": "ytwordcloud",
