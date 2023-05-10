@@ -8,13 +8,13 @@
     <link rel="shortcut icon" type="image/png" href="/public/logo.png">
     <link rel="apple-touch-icon" href="/public/logo.png">
     <meta property="og:image" content="/public/logo.png">
-    <meta name="twitter:title" content="...">
-    <meta name="twitter:description" content="...">
+    <meta name="twitter:title" content="Ollie's Portfolio">
+    <meta name="twitter:description" content="My portfolio">
     <meta name="twitter:image" content="/public/logo.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:title" content="..." />
-    <meta property="og:description" content="..." />
-    <meta name="description" content="..." />
+    <meta property="og:title" content="Ollie's Portfolio" />
+    <meta property="og:description" content="My portfolio" />
+    <meta name="description" content="My portfolio" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ollieg.codes" />
     <meta charset="UTF-8">
@@ -27,13 +27,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
         integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/public/script/index.bundle.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>...</title>
+    <title>Ollie's Portfolio</title>
 </head>
 
 <body>
-    <h1>Website rebuild coming very soon...</h1>
-    <div id="links">
+    <noscript>This site requires JavaScript to display the best.</noscript>
+    <main id="main">
+        <section id="greetbox" class="scroll-anim infobox">
+            <a id="my-info"></a>
+            <h1>Hi There!</h1>
+            <h2>My name's Ollie, and I develop websites and software. This is my portfolio of some projects I'm working
+                on or have worked on, and some other useful information.</h2>
+        </section>
+        <section id="linkbox" class="scroll-anim infobox">
+            <a id="my-links"></a>
+            <h1>My Links</h1>
+            <div id="links">
                 <a href="https://github.com/obfuscatedgenerated" target="_blank" rel="noopener noreferrer"
                     class="social-link"><i class="fa-brands fa-github"></i>
                     <p class="social-text">GitHub</p>
@@ -50,7 +61,90 @@
                     class="social-link"><i class="fa-brands fa-npm"></i>
                     <p class="social-text">NPM</p>
                 </a>
-   </div>
+            </div>
+        </section>
+        <section id="techstack" class="scroll-anim infobox">
+            <a id="my-tech"></a>
+            <h1>My Tech Stack</h1>
+            <h2>I work with many languages and technologies, but I tend to prefer:</h2>
+            <figure class="langtable">
+                <div class="lang">
+                    <img src="./public/godot.svg" alt="Godot icon" draggable="false" />
+                    <h3>Godot</h3>
+                </div>
+                <div class="lang">
+                    <img src="./public/python-min.png" alt="Python icon" draggable="false" />
+                    <h3>Python</h3>
+                </div>
+                <div class="lang">
+                    <img src="./public/html-min.png" alt="HTML5 icon" draggable="false" />
+                    <h3>HTML5</h3>
+                </div>
+                <div class="lang">
+                    <img src="./public/js-min.png" alt="JavaScript icon" draggable="false" />
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="lang">
+                    <img src="./public/c-min.png" alt="C icon" draggable="false" />
+                    <h3>C</h3>
+                </div>
+                <div class="lang">
+                    <img src="./public/ellipsis-min.png" alt="ellipsis" draggable="false" />
+                    <h3>And more...</h3>
+                </div>
+            </figure>
+        </section>
+        <section id="projectbox" class="scroll-anim infobox">
+            <a id="my-projects"></a>
+            <h1>My Projects</h1>
+            <figure id="project-shelf">
+                                <a style="background-image:url(&quot;https://github.com/obfuscatedgenerated/ClickbaitDetector/raw/main/logo-bg.png&quot;)" id="project-clickbaitdetector" class="project scroll-anim" href="./project/clickbaitdetector">
+                    <article class="project-blocker">
+                        <p class="project-title">ClickbaitDetector</p>
+                        <p class="project-description">An AI written in Python with Tensorflow that detects clickbait.</p>
+                    </article>
+                </a><a style="background-image:url(&quot;/public/logo.png&quot;)" id="project-passwordgenerator" class="project scroll-anim" href="./project/passwordgenerator">
+                    <article class="project-blocker">
+                        <p class="project-title">PasswordGenerator</p>
+                        <p class="project-description">[WIP] A Java program that generates passwords to the user's parameters.</p>
+                    </article>
+                </a><a style="background-image:url(&quot;https://github.com/obfuscatedgenerated/gmodCSSDownloader/raw/main/portfolio-img.png&quot;)" id="project-gmodcssdownloader" class="project scroll-anim" href="./project/gmodcssdownloader">
+                    <article class="project-blocker">
+                        <p class="project-title">gmodCSSDownloader</p>
+                        <p class="project-description">A small Python program that uses SteamCMD to install CS:Source assets for Garry's Mod easily, quickly and legally.</p>
+                    </article>
+                </a><a style="background-image:url(&quot;https:///xtask.ollieg.codes/public/icon.png&quot;)" id="project-xtask" class="project scroll-anim" href="./project/xtask">
+                    <article class="project-blocker">
+                        <p class="project-title">xTask</p>
+                        <p class="project-description">An online UI for internet multitasking on any device.</p>
+                    </article>
+                </a><a style="background-image:url(&quot;/public/logo.png&quot;)" id="project-animopoly" class="project scroll-anim" href="./project/animopoly">
+                    <article class="project-blocker">
+                        <p class="project-title">Animopoly</p>
+                        <p class="project-description">A fun animal purchasing board game with absolutely no relation to other board games whatsoever!</p>
+                    </article>
+                </a><a style="background-image:url(&quot;https://mewsic.ollieg.codes/public/logo.png&quot;)" id="project-mewsic" class="project scroll-anim" href="./project/mewsic">
+                    <article class="project-blocker">
+                        <p class="project-title">Mewsic</p>
+                        <p class="project-description">[WIP] A PAW (purring audio workstation)</p>
+                    </article>
+                </a><a style="background-image:url(&quot;https://github.com/obfuscatedgenerated/ytWordCloud/raw/main/example.png&quot;)" id="project-ytwordcloud" class="project scroll-anim" href="./project/ytwordcloud">
+                    <article class="project-blocker">
+                        <p class="project-title">ytWordCloud</p>
+                        <p class="project-description">A Python program that generates a word cloud from a YouTube channel.</p>
+                    </article>
+                </a><a style="background-image:url(&quot;/public/logo.png&quot;)" id="project-typethon" class="project scroll-anim" href="./project/typethon">
+                    <article class="project-blocker">
+                        <p class="project-title">Typethon</p>
+                        <p class="project-description">Typethon is an extremely lightweight and simple module for strongly typed Python.</p>
+                    </article>
+                </a>
+            </figure>
+        </section>
+        <figure id="cgraph-cont" class="scroll-anim">
+            <img id="cgraph" src="https://ghchart.rshah.org/obfuscatedgenerated" alt="github contributions graph">
+        </figure>
+    </main>
 </body>
 
 </html>
